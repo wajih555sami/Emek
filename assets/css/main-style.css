@@ -805,6 +805,9 @@ button {
   font-family: "Graphology_Arabic_Light";
   margin-bottom: 18px;
 }
+.footer-sec .one-col .links-list {
+  padding: 0;
+}
 .footer-sec .one-col .links-list li {
   position: relative;
   margin-bottom: 10px;

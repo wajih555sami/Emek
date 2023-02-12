@@ -20,6 +20,10 @@ body{
 .about-sec::after{
     inset-inline-start: 160px;
 }
+.welcom-sec .one-slide .hold-content .btns-action a{
+    border-top-right-radius: 0px ;
+    border-top-left-radius: 10px;
+}
 
 .welcom-sec .one-slide .hold-content,
 .about-sec .content,
