@@ -1,0 +1,26 @@
+@import '../variables/_variables.scss';
+
+.files-sec{
+    position: relative;
+    z-index: 1;
+    background-color: #E1E6E8;
+    &::before{
+        content: '';
+        position: absolute;
+        top: -80px;
+        inset-inline-end: 0;
+        background-image: url(../img/CompositeLayerF1.png);
+        background-repeat: no-repeat;
+        width: 160px;
+        height: 160px;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: -80px;
+        inset-inline-start: 0;
+        background-image: url(../img/CompositeLayerF2.png);
+        width: 240px;
+        height: 240px;
+    }
+}

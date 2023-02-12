@@ -1,0 +1,162 @@
+
+@import 'sass/variables/_variables.scss';
+
+@font-face {
+    font-family: $ge_flow_Bold;
+    src: url('../fonts/GE_Flow_Bold.eot');
+    src: url('../fonts/GE_Flow_Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GE_Flow_Bold.woff2') format('woff2'),
+        url('../fonts/GE_Flow_Bold.woff') format('woff'),
+        url('../fonts/GE_Flow_Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $ge_flow_Regular;
+    src: url('../fonts/GE_Flow_Regular.eot');
+    src: url('../fonts/GE_Flow_Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GE_Flow_Regular.woff2') format('woff2'),
+        url('../fonts/GE_Flow_Regular.woff') format('woff'),
+        url('../fonts/GE_Flow_Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $graphology_Bold;
+    src: url('../fonts/Graphology_Arabic_Bold.eot');
+    src: url('../fonts/Graphology_Arabic_Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Graphology_Arabic_Bold.woff2') format('woff2'),
+        url('../fonts/Graphology_Arabic_Bold.woff') format('woff'),
+        url('../fonts/Graphology_Arabic_Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $graphology_Light;
+    src: url('../fonts/Graphology_Light.eot');
+    src: url('../fonts/Graphology_Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Graphology_Light.woff2') format('woff2'),
+        url('../fonts/Graphology_Light.woff') format('woff'),
+        url('../fonts/Graphology_Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth;
+    // font-size: 100%;
+    // @media(max-width: 576px){
+    //     font-size: 80%;
+    // }
+} 
+body{
+    font-family: $ge_flow_Regular;
+}
+a, a:hover{
+    color: #333;
+    text-decoration: none;
+}
+button{
+    border: 0;
+    background-color: transparent;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.bg-cover{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.mainColor{color: $mainColor !important;}
+.secondColor{color: $secondColor !important;}
+.blackColor{color: $blackColor !important;}
+.mainBgColor{background-color: $mainColor !important;}
+.secondBgColor{background-color: $secondColor !important;}
+.blackBgColor{background-color: $blackColor !important;}
+.size-16{font-size: 1rem !important;}
+.size-12{font-size: 0.75rem !important;}
+.size-14{font-size: 0.875rem !important;}
+.size-18{font-size: 1.125rem !important;}
+.pt-section{
+    padding-top: 100px;
+}
+.g-link{
+    color: #EF5214;
+    display: inline-flex;
+    align-items: center;
+    font-size: $size_16;
+    font-family: $graphology_Light;
+    position: relative;
+    &::after{
+        content: '';
+        display: inline-block;
+        width: 12px;
+        height: 9px;
+        background: url(../img/left-link.png) center no-repeat;
+        margin-inline-start: 10px;
+        transform: rotateY(180deg);
+
+    }
+}
+[dir=rtl] .g-link::after{
+    transform: rotateY(0deg);
+}
+
+@import 'sass/sections/_header.scss';
+
+.btn-common{
+    background-color: #FFF;
+    color: $mainColor;
+    font-size: $size_16;
+    text-align: center;
+    outline: 0;
+    border: 0;
+    opacity: 1;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    margin-top: 20px;
+    &:hover{
+        color: #FFF;
+        background-color: $mainColor;
+    }
+}
+
+.social_media{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li{
+        &:not(:last-of-type){
+            margin-inline-end: 15px;
+        }
+        a{
+            color: #FFF;
+            transition: .3s;
+            &:hover{
+                color: $mainColor;
+            }
+        }
+    }
+}
+
+// @import 'sass/sections/_home.scss';
+@import 'sass/sections/_welcom.scss';
+@import 'sass/sections/_about.scss';
+@import 'sass/sections/_products.scss';
+@import 'sass/sections/_services.scss';
+@import 'sass/sections/_projects.scss';
+@import 'sass/sections/_files.scss';
+@import 'sass/sections/_footer.scss';

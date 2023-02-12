@@ -1,0 +1,22 @@
+@import '../variables/_variables.scss';
+
+.services-sec{
+    position: relative;
+    z-index: 1;
+    background-color: $secondColor;
+    &::before{
+        content: '';
+        position: absolute;
+        top: -160px;
+        inset-inline-end: 0;
+        background-image: url(../img/CompositeLayerS3.png);
+        transform: rotateY(180deg);
+        background-repeat: no-repeat;
+        width: 240px;
+        height: 240px;
+    }
+    .bg-contain{
+        background-color: #E1E6E8;
+        margin: 80px 0 0 80px;
+    }
+}

@@ -1,0 +1,76 @@
+@import '../variables/_variables.scss';
+
+
+// start footer-sec
+.footer-sec {
+    background-color: $blackColor;
+    color: #FFF;
+    padding-top: 100px;
+    .data{
+        margin-bottom: 45px;
+        .hold-img{
+            margin-bottom: 30px;
+        }
+        .info{
+            font-size: $size_18;
+            line-height: 1.5;
+        }
+        .address{
+            margin-top: 25px;
+            .text{
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                i{
+                    color: $mainColor;
+                }
+                span{
+                    display: inline-block;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+    .one-col{
+        margin-bottom: 45px;
+        .title{
+            font-size: $size_18;
+            font-family: $graphology_Light;
+            margin-bottom: 18px;
+        }
+        .links-list{
+            li{
+                position: relative;
+                margin-bottom: 10px;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    background-color: $mainColor;
+                    width: 8px;
+                    height: 8px;
+                }
+                a{
+                    font-size: $size_18;
+                    color: rgba(255, 255, 255, .7);
+                    transition: .3s ease-in-out;
+                    margin-inline-start: 10px;
+                    &:hover{
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+    .copyright{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #707070;
+        padding: 18px 0;
+        @media (max-width: 768px) {
+            flex-direction: column-reverse;
+        }
+
+    }
+}
+// end footer-sec

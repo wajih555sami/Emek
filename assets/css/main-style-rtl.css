@@ -1,0 +1,30 @@
+
+
+
+body{
+    direction: rtl;
+}
+.text-right {
+    text-align: left!important;
+}
+.text-left {
+    text-align: right!important;
+}
+.header-sec .main-navbar .navbar-nav .nav-item .dropdown-sub-menu{
+    left: unset;
+    right: 0;
+}
+.about-sec .bg-contain {
+    margin: 80px 80px 0 0px;
+}
+.about-sec::after{
+    inset-inline-start: 160px;
+}
+
+.welcom-sec .one-slide .hold-content,
+.about-sec .content,
+.footer-sec,
+.header-sec .main-navbar .contacts-num .content
+{
+    text-align: right;
+}
