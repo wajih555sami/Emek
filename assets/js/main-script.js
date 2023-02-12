@@ -20,6 +20,39 @@ $(document).ready(function(){
 		],
 	});
 
+	// start owl-products
+	$('.owl-products').owlCarousel({
+		nav: false,
+		items:2,
+		margin:0,
+		dots:true,
+		loop:false,
+		rtl: true,
+		autoplay:true,
+    	autoplayTimeout:8000,
+        autoplayHoverPause:true,
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 50,
+				margin:30
+			},
+			400:{
+				items:1,
+				stagePadding: 100,
+				margin:30
+			},
+			768:{
+				items:1,
+				stagePadding: 150,
+				margin:30
+			},
+			992:{
+				items:2
+			}
+		}
+	});
+
 	// Move In Verifcation inputs
 	$(".verify-input").keyup(function () {
 		if (this.value.length == this.maxLength) {

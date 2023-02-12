@@ -90,11 +90,17 @@ button{
 }
 .g-link{
     color: #EF5214;
+    border-bottom: 1px solid #EF5214;
+    padding-bottom: 5px;
+    transition: .3s;
     display: inline-flex;
     align-items: center;
     font-size: $size_16;
     font-family: $graphology_Light;
     position: relative;
+    @media (max-width: 929px){
+        font-size: $size_12;
+    }
     &::after{
         content: '';
         display: inline-block;
@@ -104,6 +110,21 @@ button{
         margin-inline-start: 10px;
         transform: rotateY(180deg);
 
+    }
+}
+.g-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    .title{
+        font-size: 40px;
+        font-family: $ge_flow_Bold;
+        color: #333;
+        margin-bottom: 0;
+        @media (max-width: 929px){
+            font-size: 20px;
+        }
     }
 }
 [dir=rtl] .g-link::after{
