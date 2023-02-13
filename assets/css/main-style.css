@@ -137,11 +137,34 @@ button {
   font-family: "GE_Flow_Bold";
   color: #333;
   margin-bottom: 0;
+  position: relative;
 }
 @media (max-width: 929px) {
   .g-head .title {
     font-size: 20px;
   }
+}
+.g-head.with-border .title {
+  margin-bottom: 30px;
+}
+.g-head.with-border .title::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  width: 100%;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.g-head.with-border .title::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -15px;
+  inset-inline-start: -15px;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 [dir=rtl] .g-link::after {
@@ -911,6 +934,7 @@ button {
   .owl-products.owl-theme .owl-dots {
     position: static;
     transform: unset;
+    margin-top: 40px !important;
   }
 }
 
@@ -918,6 +942,12 @@ button {
   position: relative;
   z-index: 1;
   background-color: #003976;
+}
+@media (max-width: 1200px) {
+  .services-sec {
+    margin-top: 100px;
+    padding-bottom: 50px;
+  }
 }
 .services-sec::before {
   content: "";
@@ -930,9 +960,128 @@ button {
   width: 240px;
   height: 240px;
 }
-.services-sec .bg-contain {
-  background-color: #E1E6E8;
-  margin: 80px 0 0 80px;
+@media (max-width: 1200px) {
+  .services-sec::before {
+    top: -100px;
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+  }
+}
+.services-sec .service-box {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-inline-end: 1px solid rgba(255, 255, 255, 0.3);
+  max-width: 360px;
+  height: 360px;
+  position: relative;
+  z-index: 3;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-end;
+  background-color: transparent;
+}
+@media (max-width: 1200px) {
+  .services-sec .service-box {
+    height: 300px;
+    margin: auto;
+    max-width: 300px;
+  }
+}
+.services-sec .service-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: 0.3s;
+}
+@media (max-width: 1200px) {
+  .services-sec .service-box::after {
+    transform: unset;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 49.2%, rgba(0, 0, 0, 0.6) 70%);
+  }
+}
+.services-sec .service-box .service-img {
+  position: absolute;
+  inset: 0;
+  transform: scaleY(0);
+  transition: 0.3s;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 1200px) {
+  .services-sec .service-box .service-img {
+    transform: unset;
+  }
+}
+.services-sec .service-box .content {
+  position: relative;
+  z-index: 3;
+  padding: 0 20px 20px;
+  text-align: start;
+}
+.services-sec .service-box .content p {
+  color: #FFF;
+  font-size: 20px;
+  font-family: "GE_Flow_Bold";
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.services-sec .service-box .content .more {
+  display: inline-flex;
+  transform: rotate(-45deg);
+  transition: 0.3s;
+}
+@media (max-width: 1200px) {
+  .services-sec .service-box .content .more {
+    transform: unset;
+  }
+}
+.services-sec .service-box:hover {
+  z-index: 4;
+}
+.services-sec .service-box:hover .service-img, .services-sec .service-box:hover::after {
+  transform: scale(1.1);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 49.2%, rgba(0, 0, 0, 0.6) 70%);
+}
+@media (max-width: 1200px) {
+  .services-sec .service-box:hover .service-img, .services-sec .service-box:hover::after {
+    transform: unset;
+  }
+}
+.services-sec .service-box:hover .more {
+  transform: rotate(0deg);
+}
+
+.owl-services.owl-carousel .owl-stage {
+  padding-top: 20px;
+}
+
+@media (max-width: 1200px) {
+  .owl-services.owl-carousel .owl-item {
+    position: relative;
+    z-index: 1;
+  }
+}
+.owl-services.owl-carousel .owl-item:hover {
+  z-index: 2;
+}
+
+@media (max-width: 1200px) {
+  .owl-services.owl-theme .owl-dots {
+    position: static;
+    transform: unset;
+    margin-top: 40px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .owl-services.owl-theme .owl-dots {
+    display: none;
+  }
 }
 
 .projects-sec {
