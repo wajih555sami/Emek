@@ -141,7 +141,7 @@ button {
 }
 @media (max-width: 929px) {
   .g-head .title {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 .g-head.with-border .title {
@@ -1092,6 +1092,7 @@ button {
   position: relative;
   z-index: 1;
   background-color: #E1E6E8;
+  padding-bottom: 100px;
 }
 .files-sec::before {
   content: "";
@@ -1103,6 +1104,14 @@ button {
   width: 160px;
   height: 160px;
 }
+@media (max-width: 992px) {
+  .files-sec::before {
+    top: -50px;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+  }
+}
 .files-sec::after {
   content: "";
   position: absolute;
@@ -1111,6 +1120,56 @@ button {
   background-image: url(../img/CompositeLayerF2.png);
   width: 240px;
   height: 240px;
+}
+@media (max-width: 992px) {
+  .files-sec::after {
+    bottom: -50px;
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+  }
+}
+.files-sec > .container {
+  position: relative;
+  z-index: 3;
+  background-color: #E1E6E8;
+}
+.files-sec .g-head.with-border .title::before {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.files-sec .g-head.with-border .title::after {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.files-sec .file-box {
+  border-inline-start: 1px solid rgba(0, 0, 0, 0.1);
+  padding-inline-start: 20px;
+  margin-bottom: 40px;
+}
+.files-sec .file-box .hold-img {
+  max-height: 100px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.files-sec .file-box .name {
+  font-family: "Graphology_Arabic_Bold";
+  font-size: 20px;
+  color: #333;
+  position: relative;
+  margin-bottom: 15px;
+}
+.files-sec .file-box .name::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline-start: -20px;
+  width: 8px;
+  height: 100%;
+  background-color: #F9840E;
+}
+.files-sec .file-box p {
+  font-family: "Graphology_Arabic_Light";
+  font-size: 14px;
+  color: #333;
 }
 
 .footer-sec {

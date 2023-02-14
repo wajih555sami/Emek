@@ -25,17 +25,19 @@ body{
     border-top-left-radius: 10px;
 }
 
-@media (max-width: 992px){
-    .services-sec::before {
-        transform: unset;
-    }
+.services-sec::before {
+    transform: unset;
+}
+.services-sec::before{
+    transform: unset;
 }
 
 
 .welcom-sec .one-slide .hold-content,
 .about-sec .content,
 .footer-sec,
-.header-sec .main-navbar .contacts-num .content
+.header-sec .main-navbar .contacts-num .content,
+.files-sec .file-box
 {
     text-align: right;
 }
